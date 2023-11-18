@@ -1,16 +1,8 @@
 ---
 version: "3.5"
 
-networks:
-  ittools:
-
-volumes: 
-  # tools_assets:
-  #   driver: local
-  #   driver_opts:
-  #     type: none
-  #     o: bind
-  #     device: /mnt/data/business/it-tools/tool_assets  
+# networks:
+#   ittools: 
 
 services:
   it-tools:
@@ -21,5 +13,5 @@ services:
       ports:
         - 20001:80
 
-      networks:
-        - ittools
+      # networks:
+      #   - ittools
