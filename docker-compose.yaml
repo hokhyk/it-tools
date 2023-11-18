@@ -1,0 +1,25 @@
+---
+version: "3.5"
+
+networks:
+  ittools:
+
+volumes: 
+  # tools_assets:
+  #   driver: local
+  #   driver_opts:
+  #     type: none
+  #     o: bind
+  #     device: /mnt/data/business/it-tools/tool_assets  
+
+services:
+  it-tools:
+      # image: "it-tools:latest"
+      build: .
+      container_name: it-tools
+      restart: always
+      ports:
+        - 20001:80
+
+      networks:
+        - ittools
